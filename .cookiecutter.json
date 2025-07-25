@@ -8,7 +8,7 @@
         "database": "PostgreSql",
         "database_name": "medical",
         "aspire_deploy": "no",
-        "github_deployment": "''",
+        "github_deployment": "",
         "github_organization": "Stillpoint-Software",
         "deployment_environment": "''",
         "project_path": "''",
