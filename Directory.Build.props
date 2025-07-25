@@ -1,0 +1,29 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Solution version numbers -->
+  <PropertyGroup>
+     <MajorVersion>1</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <PatchVersion>0</PatchVersion>
+    <RevisionVersion>0</RevisionVersion>
+    <VersionPrefix>$(MajorVersion).$(MinorVersion).$(PatchVersion)</VersionPrefix>
+    <FileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(RevisionVersion)</FileVersion>
+  </PropertyGroup>
+  <!-- Disable automatic package publishing -->
+  <PropertyGroup>
+    <PublishPackage>false</PublishPackage>
+  </PropertyGroup>
+  <!-- SourceLink -->
+  <PropertyGroup>
+    <!-- Enable deterministic build for nuget package -->
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

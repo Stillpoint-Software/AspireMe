@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>AspireMe.Data.PostgreSql</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    
+    <PackageReference Include = "Aspire.Npgsql" Version = "9.3.1" />
+    <PackageReference Include = "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version = "9.3.1" />
+    
+    <PackageReference Include = "System.Text.Json" Version = "9.0.7" />
+  </ItemGroup >
+    <ItemGroup>
+    <ProjectReference Include="..\AspireMe.Data.Abstractions\AspireMe.Data.Abstractions.csproj" />
+  </ItemGroup>
+</Project>

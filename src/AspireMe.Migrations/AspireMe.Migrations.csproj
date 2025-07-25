@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup >
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+<ItemGroup >
+
+  <EmbeddedResource Include="Resources\1000-Initial\CreateSchema.sql" />
+
+  </ItemGroup >
+  <ItemGroup >
+
+    <PackageReference Include = "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version = "9.3.1" />
+    <PackageReference Include = "Hyperbee.Migrations.Providers.Postgres" Version = "2.0.3" />
+    <PackageReference Include = "Npgsql" Version = "9.0.3" />
+
+
+    <PackageReference Include = "Hyperbee.Migrations" Version = "2.0.3" />
+     <PackageReference Include = "Microsoft.EntityFrameworkCore.Tools" Version = "9.0.7" >
+      <PrivateAssets > all </PrivateAssets >
+      <IncludeAssets > runtime; build; native; contentfiles; analyzers; buildtransitive </IncludeAssets >
+    </PackageReference >
+    <PackageReference Include = "Microsoft.Extensions.Hosting" Version = "9.0.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include = "..\AspireMe.Data.PostgreSql\AspireMe.Data.PostgreSql.csproj" />
+    <ProjectReference Include = "..\AspireMe.ServiceDefaults\AspireMe.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>

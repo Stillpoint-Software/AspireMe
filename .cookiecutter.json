@@ -1,0 +1,24 @@
+{
+    "cookiecutter": {
+        "is_aspire": "yes",
+        "assembly_name": "AspireMe",
+        "root_namespace": "aspireme",
+        "api_app_name": "AspireMe.Api",
+        "api_web_url": "https://www.aspireme.com",
+        "database": "PostgreSql",
+        "database_name": "medical",
+        "aspire_deploy": "no",
+        "github_deployment": "''",
+        "github_organization": "Stillpoint-Software",
+        "deployment_environment": "''",
+        "project_path": "''",
+        "template_path": "''",
+        "include_audit": "yes",
+        "include_oauth": "no",
+        "include_azure_key_vault": "no",
+        "include_azure_application_insights": "no",
+        "include_azure_storage": "no",
+        "include_azure_service_bus": "no",
+        "template_sha": "3724e8d49f00fea2b2cd7dd8da4d7ce3b3871198"
+    }
+}

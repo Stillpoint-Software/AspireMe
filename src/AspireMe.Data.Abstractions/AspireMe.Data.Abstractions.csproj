@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+  
+   <PackageReference Include="Lamar" Version="15.0.1" />
+  <PackageReference Include="System.Text.Json" Version="9.0.7" />
+  <PackageReference Include = "Microsoft.EntityFrameworkCore" Version = "9.0.7" />
+  <PackageReference Include = "Microsoft.Extensions.Options" Version = "9.0.7" />
+</ItemGroup>
+ <ItemGroup>
+    <ProjectReference Include="..\AspireMe.Core\AspireMe.Core.csproj" />
+  </ItemGroup>
+</Project>

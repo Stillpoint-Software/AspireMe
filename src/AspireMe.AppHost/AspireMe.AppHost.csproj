@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.3.0" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspireMe.Api\AspireMe.Api.csproj" />
+    <ProjectReference Include="..\AspireMe.Migrations\AspireMe.Migrations.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.3.1" />
+    
+    <PackageReference Include="Aspire.Hosting.PostgreSql" Version="9.3.1" />
+    <PackageReference Include="Npgsql" Version="9.0.3" />
+    
+    <PackageReference Include="Yarp.ReverseProxy" Version="2.3.0" />
+    
+    
+    
+    
+
+  </ItemGroup>
+
+</Project>

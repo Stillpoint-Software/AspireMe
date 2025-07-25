@@ -1,0 +1,55 @@
+name: project_template_update
+
+permissions:
+  contents: write
+  pull-requests:  write
+  
+on:
+  workflow_dispatch:
+    inputs:
+      repo_branch:
+        description: "Branch to update"
+        required: true
+        default: develop
+  schedule:
+    - cron: "0 7 * * MON"
+
+jobs:
+  # 1) Figure out which branch we’re updating, then test for its existence
+  check_branch:
+    runs-on: ubuntu-latest
+    outputs:
+      branch_name: ${{ steps.set_branch.outputs.branch_name }}
+      branch_exists: ${{ steps.check.outputs.branch_exists }}
+    steps:
+      - name: Determine branch to update
+        id: set_branch
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "branch_name=${{ github.event.inputs.repo_branch }}" >> $GITHUB_OUTPUT
+          else
+            echo "branch_name=${{ vars.TemplateUpdateBranch }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check if branch exists
+        id: check
+        run: |
+          if git ls-remote --exit-code https://github.com/${{ github.repository }}.git \
+               ${{ steps.set_branch.outputs.branch_name }}; then
+            echo "branch_exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "branch_exists=false" >> $GITHUB_OUTPUT
+            echo "⚠️ Branch '${{ steps.set_branch.outputs.branch_name }}' not found, skipping update."
+          fi
+
+  # 2) Only if that branch exists, call the reusable template_update workflow
+  update:
+    needs: check_branch
+    if: needs.check_branch.outputs.branch_exists == 'true'
+    
+    uses: Stillpoint-Software/shared-workflows/.github/workflows/template_update.yml@main
+    with:
+      template_repo: "https://github.com/Stillpoint-Software/project.cookiecutter.git"
+      
+      repo_branch: ${{ needs.check_branch.outputs.branch_name }}
+      
