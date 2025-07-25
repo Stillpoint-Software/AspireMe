@@ -18,9 +18,6 @@ var projectdb = dbServer.AddDatabase( "medical" );
 var apiService = builder.AddProject<Projects.AspireMe_Api>( "aspireme-api" )
     .WithReference( projectdb )
     .WithExternalHttpEndpoints()
-
-
-
     .WithSwaggerUI()
     .WithHttpHealthCheck( "/health" );
 
