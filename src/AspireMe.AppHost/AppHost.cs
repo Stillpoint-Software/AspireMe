@@ -13,7 +13,6 @@ var dbServer = builder.AddPostgres( "postgres", userName: dbUser, password: dbPa
     .WithPgAdmin( x => x.WithImageTag( "9.5" ) );
 
 
-
 var projectdb = dbServer.AddDatabase( "medical" );
 
 var apiService = builder.AddProject<Projects.AspireMe_Api>( "aspireme-api" )
