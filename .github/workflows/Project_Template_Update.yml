@@ -12,7 +12,7 @@ on:
         required: true
         default: develop
   schedule:
-    - cron: "50 13 * * 5"
+    - cron: '10 15 * * 5'
 
 jobs:
   # 1) Figure out which branch we’re updating, then test for its existence
