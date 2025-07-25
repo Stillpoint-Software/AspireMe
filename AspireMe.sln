@@ -15,13 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMe.Tests", "tests\Asp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Actions", "{86031609-E2F9-4727-935E-7DC3FE04A88E}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\DbMigrations_Production.yml = .github\workflows\DbMigrations_Production.yml
-		.github\workflows\DbMigrations_Staging.yml = .github\workflows\DbMigrations_Staging.yml
-		.github\workflows\ProdDeployment.yml = .github\workflows\ProdDeployment.yml
-		.github\workflows\ProdProvisioning.yml = .github\workflows\ProdProvisioning.yml
 		.github\workflows\project_template_update.yml = .github\workflows\project_template_update.yml
-		.github\workflows\StagingDeployment.yml = .github\workflows\StagingDeployment.yml
-		.github\workflows\StagingProvisioning.yml = .github\workflows\StagingProvisioning.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireMe.Api", "src\AspireMe.Api\AspireMe.Api.csproj", "{1CF06017-4D04-463B-94DC-752A32FEAB33}"
