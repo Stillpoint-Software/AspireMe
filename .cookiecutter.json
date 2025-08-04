@@ -19,6 +19,6 @@
     "include_azure_application_insights": "no",
     "include_azure_storage": "no",
     "include_azure_service_bus": "no",
-    "template_sha": "b0d090d66ac3d345a5eefe8bc94d2c81b918dd98"
+    "template_sha": "329a708ca168780dff196001e1341426fcacc9d7"
   }
 }
